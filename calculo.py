@@ -23,7 +23,6 @@ def CalculaQuartil (qi, df, qtd, h):
     F = df['Fi'][i-1]
   else:
     F = 0;
-  h = 2
   fq = df['fi'][i]
   return lq + (((multi/4) -  F) * h) / fq
 
@@ -31,7 +30,6 @@ def CalculaQuartil (qi, df, qtd, h):
 def CalculaPercentil (pi, df, qtd, h):
   tam = len(df.index)
   multi = pi * qtd;
-  h = 2
   pi = pi/100;
   localiza_percentil = pi * qtd;
   valor = 0
